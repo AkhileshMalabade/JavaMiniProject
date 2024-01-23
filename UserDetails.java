@@ -4,18 +4,19 @@ import java.io.Serializable;
 
 public class UserDetails implements Serializable{
 
-	String userName;  
+	String userName;
 	String password;
-	String roll;
+	String role;
 	
-	public UserDetails(String userName,String password,String roll)
+	UserDetails()
+	{
+		
+	}
+	UserDetails(String userName,String password, String role)
 	{
 		this.userName=userName;
 		this.password=password;
-		this.roll=roll;
-	}
-	public UserDetails() {
-		
+		this.role=role;
 	}
 	public String getUserName() {
 		return userName;
@@ -29,12 +30,11 @@ public class UserDetails implements Serializable{
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getRoll() {
-		return roll;
+	public String getRole() {
+		return role;
 	}
-	public void setRoll(String roll) {
-		this.roll = roll;
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
-
 }
